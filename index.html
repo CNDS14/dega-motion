@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DEGA Motion — Agencia de producción audiovisual especializada en contenido cinematográfico para redes sociales. Eleva tu marca con tomas que detienen el scroll.">
+    <meta name="theme-color" content="#0B0829">
+    <title>DEGA MOTION — Producción Audiovisual Cinematográfica</title>
+
+    <!-- Preconnect para acelerar carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon inline SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0829'/%3E%3Ctext x='50' y='62' font-family='Arial Black' font-size='42' fill='%23FF8400' text-anchor='middle' font-weight='900'%3ED%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- ============================================== -->
+    <!-- A) PRE-LOADER: Animación de entrada sofisticada -->
+    <!-- ============================================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <div class="preloader__logo">
+                <span class="preloader__char">D</span>
+                <span class="preloader__char">E</span>
+                <span class="preloader__char">G</span>
+                <span class="preloader__char">A</span>
+                <span class="preloader__dot"></span>
+                <span class="preloader__char">M</span>
+                <span class="preloader__char">O</span>
+                <span class="preloader__char">T</span>
+                <span class="preloader__char">I</span>
+                <span class="preloader__char">O</span>
+                <span class="preloader__char">N</span>
+            </div>
+            <div class="preloader__bar">
+                <div class="preloader__bar-fill" id="preloaderFill"></div>
+            </div>
+            <div class="preloader__counter" id="preloaderCounter">00</div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- NAVBAR -->
+    <!-- ============================================== -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__container">
+            <!-- Logotipo SVG placeholder de DEGA Motion -->
+            <a href="#hero" class="navbar__logo" aria-label="DEGA Motion - Inicio">
+                <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <!-- Marca circular animada -->
+                    <g class="logo-mark">
+                        <circle cx="20" cy="20" r="16" fill="none" stroke="#FF8400" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="6" fill="#FF8400"/>
+                        <circle cx="20" cy="20" r="10" fill="none" stroke="#8FA0D8" stroke-width="1" opacity="0.6"/>
+                    </g>
+                    <!-- Texto del logo -->
+                    <text x="48" y="19" font-family="Syncopate, sans-serif" font-size="13" font-weight="700" fill="#F9DFC6" letter-spacing="2">DEGA</text>
+                    <text x="48" y="33" font-family="Syncopate, sans-serif" font-size="9" font-weight="400" fill="#8FA0D8" letter-spacing="3.5">MOTION</text>
+                </svg>
+            </a>
+
+            <!-- Menú desktop -->
+            <nav class="navbar__menu" aria-label="Navegación principal">
+                <a href="#arsenal" class="navbar__link">Arsenal</a>
+                <a href="#showreel" class="navbar__link">Showreel</a>
+                <a href="#partners" class="navbar__link">Socios</a>
+                <a href="#contacto" class="navbar__link">Contacto</a>
+            </nav>
+
+            <!-- CTA navbar -->
+            <a href="#contacto" class="navbar__cta">
+                <span>Cotizar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                </svg>
+            </a>
+
+            <!-- Menú móvil toggle -->
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil overlay -->
+        <div class="navbar__mobile" id="navMobile">
+            <a href="#arsenal" class="navbar__mobile-link">Arsenal</a>
+            <a href="#showreel" class="navbar__mobile-link">Showreel</a>
+            <a href="#partners" class="navbar__mobile-link">Socios</a>
+            <a href="#contacto" class="navbar__mobile-link">Contacto</a>
+        </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- B) HERO SECTION con video de fondo -->
+    <!-- ============================================== -->
+    <section class="hero" id="hero">
+        <!-- Video de fondo HTML5 nativo -->
+        <div class="hero__video-wrapper">
+            <video class="hero__video" autoplay loop muted playsinline poster="">
+                <!-- Placeholder: reemplazar con tu video real -->
+                <source src="https://cdn.coverr.co/videos/coverr-a-cinematographer-filming-with-a-gimbal-1572/1080p.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <!-- Overlay de oscurecimiento -->
+            <div class="hero__overlay"></div>
+            <!-- Grain texture overlay -->
+            <div class="hero__grain"></div>
+        </div>
+
+        <!-- Contenido del hero -->
+        <div class="hero__content">
+            <div class="hero__badge" data-reveal>
+                <span class="hero__badge-dot"></span>
+                <span>Producción audiovisual · 2025</span>
+            </div>
+
+            <h1 class="hero__title">
+                <span class="hero__title-line" data-reveal data-delay="100">Detenemos</span>
+                <span class="hero__title-line hero__title-line--accent" data-reveal data-delay="200">el scroll.</span>
+                <span class="hero__title-line" data-reveal data-delay="300">Elevamos</span>
+                <span class="hero__title-line" data-reveal data-delay="400">tu marca.</span>
+            </h1>
+
+            <p class="hero__subtitle" data-reveal data-delay="500">
+                Convertimos tu negocio local en una experiencia cinematográfica. Contenido dinámico, publicitario y con sabor de calle para redes sociales que sí venden.
+            </p>
+
+            <div class="hero__actions" data-reveal data-delay="600">
+                <a href="#contacto" class="btn btn--primary">
+                    <span class="btn__text">Quiero mi cotización</span>
+                    <span class="btn__icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#showreel" class="btn btn--ghost">
+                    <span class="btn__play">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </span>
+                    Ver showreel
+                </a>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="hero__stats" data-reveal data-delay="700">
+                <div class="hero__stat">
+                    <span class="hero__stat-num">+120</span>
+                    <span class="hero__stat-label">Proyectos entregados</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">4K</span>
+                    <span class="hero__stat-label">Calidad cinema</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">48h</span>
+                    <span class="hero__stat-label">Tiempo de entrega</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" aria-hidden="true">
+            <span>Desliza</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- C) SECCIÓN SOCIOS COMERCIALES (carrusel infinito) -->
+    <!-- ============================================== -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="partners__header" data-reveal>
+                <span class="section__eyebrow">— 01 / Confianza</span>
+                <h2 class="section__title">Nuestros socios comerciales</h2>
+                <p class="section__desc">Negocios locales que ya cuentan su historia en pantalla.</p>
+            </div>
+        </div>
+
+        <!-- Carrusel infinito -->
+        <div class="marquee">
+            <div class="marquee__track">
+                <!-- Set 1 -->
+                <div class="marquee__item">LA COCINA DEL BARRIO</div>
+                <div class="marquee__item">URBAN COFFEE CO.</div>
+                <div class="marquee__item">TACOS EL JEFE</div>
+                <div class="marquee__item">FITNESS LAB MX</div>
+                <div class="marquee__item">BARBERSHOP &amp; CO</div>
+                <div class="marquee__item">DULCE ARTESANAL</div>
+                <div class="marquee__item">MOTOR CLUB GT</div>
+                <div class="marquee__item">CASA DE VINOS</div>
+                <!-- Set 2 (duplicado para loop infinito) -->
+                <div class="marquee__item" aria-hidden="true">LA COCINA DEL BARRIO</div>
+                <div class="marquee__item" aria-hidden="true">URBAN COFFEE CO.</div>
+                <div class="marquee__item" aria-hidden="true">TACOS EL JEFE</div>
+                <div class="marquee__item" aria-hidden="true">FITNESS LAB MX</div>
+                <div class="marquee__item" aria-hidden="true">BARBERSHOP &amp; CO</div>
+                <div class="marquee__item" aria-hidden="true">DULCE ARTESANAL</div>
+                <div class="marquee__item" aria-hidden="true">MOTOR CLUB GT</div>
+                <div class="marquee__item" aria-hidden="true">CASA DE VINOS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- D) SECCIÓN "NUESTRO ARSENAL" -->
+    <!-- ============================================== -->
+    <section class="arsenal" id="arsenal">
+        <div class="container">
+            <div class="arsenal__header" data-reveal>
+                <span class="section__eyebrow">— 02 / Equipamiento</span>
+                <h2 class="section__title">Nuestro arsenal</h2>
+                <p class="section__desc">
+                    Cada toma exige la herramienta correcta. Trabajamos con equipo profesional para garantizar resultados cinematográficos en cualquier escenario, desde una cocina de food truck hasta un evento de gala.
+                </p>
+            </div>
+
+            <!-- Grid de tarjetas de equipo -->
+            <div class="arsenal__grid">
+
+                <!-- 1. OSMO POCKET 3 -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <!-- Render del equipo -->
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#2a2752"/>
+                                        <stop offset="100%" stop-color="#0f0d2e"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- Cuerpo Osmo Pocket -->
+                                <rect x="80" y="40" width="40" height="120" rx="6" fill="url(#grad1)" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <rect x="85" y="50" width="30" height="40" rx="3" fill="#0B0829" stroke="#FF8400" stroke-width="1"/>
+                                <circle cx="100" cy="120" r="12" fill="#0B0829" stroke="#8FA0D8" stroke-width="2"/>
+                                <circle cx="100" cy="120" r="6" fill="#FF8400"/>
+                                <rect x="92" y="140" width="16" height="14" rx="2" fill="#0B0829" stroke="#8FA0D8" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <!-- Video de ejemplo -->
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-pouring-coffee-into-a-cup-2633/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">Gimbal 4K</span>
+                        <h3 class="arsenal-card__title">DJI Osmo Pocket 3</h3>
+                        <p class="arsenal-card__desc">
+                            La navaja suiza del food content. Estabilización extrema y enfoque automático que sigue cada gota, vapor o ingrediente con precisión quirúrgica. Perfecto para POV's de chef y B-rolls que se sienten en HBO.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 2. DJI MINI 3 -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <!-- Drone DJI Mini -->
+                                <ellipse cx="100" cy="100" rx="35" ry="20" fill="#2a2752" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <circle cx="100" cy="105" r="6" fill="#FF8400"/>
+                                <!-- Brazos -->
+                                <line x1="70" y1="90" x2="40" y2="65" stroke="#8FA0D8" stroke-width="3"/>
+                                <line x1="130" y1="90" x2="160" y2="65" stroke="#8FA0D8" stroke-width="3"/>
+                                <line x1="70" y1="110" x2="40" y2="135" stroke="#8FA0D8" stroke-width="3"/>
+                                <line x1="130" y1="110" x2="160" y2="135" stroke="#8FA0D8" stroke-width="3"/>
+                                <!-- Hélices -->
+                                <ellipse cx="40" cy="65" rx="20" ry="3" fill="#8FA0D8" opacity="0.4"/>
+                                <ellipse cx="160" cy="65" rx="20" ry="3" fill="#8FA0D8" opacity="0.4"/>
+                                <ellipse cx="40" cy="135" rx="20" ry="3" fill="#8FA0D8" opacity="0.4"/>
+                                <ellipse cx="160" cy="135" rx="20" ry="3" fill="#8FA0D8" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-coastline-2633/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">Aéreo 4K</span>
+                        <h3 class="arsenal-card__title">DJI Mini 3</h3>
+                        <p class="arsenal-card__desc">
+                            Vistas aéreas que convierten un local cualquiera en un destino imperdible. Ideal para revelar la ubicación de tu negocio, mostrar el estacionamiento, eventos masivos o esa toma reveal que vuelve viral cualquier reel.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 3. DJI OSMO MOBILE SE -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <!-- Gimbal para celular -->
+                                <rect x="60" y="50" width="50" height="80" rx="4" fill="#0B0829" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <rect x="65" y="55" width="40" height="70" rx="2" fill="#1a1840"/>
+                                <rect x="110" y="80" width="8" height="40" fill="#2a2752" stroke="#8FA0D8" stroke-width="1"/>
+                                <rect x="115" y="100" width="40" height="20" rx="3" fill="#2a2752" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <circle cx="135" cy="110" r="4" fill="#FF8400"/>
+                                <rect x="120" y="120" width="30" height="40" rx="3" fill="#0B0829" stroke="#8FA0D8" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-a-couple-walking-down-a-street-1572/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">Mobile Pro</span>
+                        <h3 class="arsenal-card__title">DJI Osmo Mobile SE</h3>
+                        <p class="arsenal-card__desc">
+                            Movimientos suaves de cine para historias verticales. Transiciones imposibles, planos secuencia caminando por tu negocio y esos giros 360° que enganchan al espectador desde el primer segundo del reel.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 4. GOOGLE PIXEL 10 -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <!-- Pixel 10 -->
+                                <rect x="65" y="30" width="70" height="140" rx="14" fill="#2a2752" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <rect x="70" y="38" width="60" height="124" rx="8" fill="#0B0829"/>
+                                <!-- Barra de cámaras -->
+                                <rect x="70" y="48" width="60" height="22" rx="4" fill="#1a1840" stroke="#8FA0D8" stroke-width="0.5"/>
+                                <circle cx="86" cy="59" r="6" fill="#0B0829" stroke="#FF8400" stroke-width="1"/>
+                                <circle cx="104" cy="59" r="6" fill="#0B0829" stroke="#FF8400" stroke-width="1"/>
+                                <circle cx="120" cy="59" r="4" fill="#FF8400"/>
+                                <circle cx="100" cy="42" r="2" fill="#8FA0D8"/>
+                            </svg>
+                        </div>
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-a-young-man-using-his-smartphone-3633/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">AI Camera</span>
+                        <h3 class="arsenal-card__title">Google Pixel 10</h3>
+                        <p class="arsenal-card__desc">
+                            Inteligencia artificial al servicio del contenido. Modo nocturno que captura cocinas con luz mínima, video estabilizado y procesado computacional que entrega tomas listas para postear sin retoques.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 5. iPHONE 15 -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <!-- iPhone 15 -->
+                                <rect x="65" y="30" width="70" height="140" rx="16" fill="#2a2752" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <rect x="70" y="38" width="60" height="124" rx="10" fill="#0B0829"/>
+                                <!-- Dynamic Island -->
+                                <rect x="88" y="44" width="24" height="7" rx="3.5" fill="#1a1840"/>
+                                <!-- Cámaras -->
+                                <rect x="75" y="48" width="30" height="30" rx="8" fill="#1a1840" stroke="#8FA0D8" stroke-width="0.5"/>
+                                <circle cx="84" cy="58" r="5" fill="#0B0829" stroke="#FF8400" stroke-width="1"/>
+                                <circle cx="96" cy="70" r="5" fill="#0B0829" stroke="#FF8400" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-a-woman-recording-with-her-phone-7633/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">Cinematic Mode</span>
+                        <h3 class="arsenal-card__title">iPhone 15</h3>
+                        <p class="arsenal-card__desc">
+                            ProRes y modo cinemático con cambios de foco automáticos como película de Hollywood. Color science nativo que hace que los platillos se vean apetitosos y los productos irresistibles, directo de la cámara.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 6. DJI MIC MINI -->
+                <article class="arsenal-card" data-reveal>
+                    <div class="arsenal-card__media">
+                        <div class="arsenal-card__render">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="gear-svg">
+                                <!-- DJI Mic Mini -->
+                                <rect x="75" y="60" width="50" height="70" rx="8" fill="#2a2752" stroke="#8FA0D8" stroke-width="1.5"/>
+                                <circle cx="100" cy="85" r="14" fill="#1a1840" stroke="#8FA0D8" stroke-width="1"/>
+                                <!-- Grid de micrófono -->
+                                <circle cx="94" cy="80" r="1.5" fill="#FF8400"/>
+                                <circle cx="100" cy="80" r="1.5" fill="#FF8400"/>
+                                <circle cx="106" cy="80" r="1.5" fill="#FF8400"/>
+                                <circle cx="94" cy="85" r="1.5" fill="#FF8400"/>
+                                <circle cx="100" cy="85" r="1.5" fill="#FF8400"/>
+                                <circle cx="106" cy="85" r="1.5" fill="#FF8400"/>
+                                <circle cx="94" cy="90" r="1.5" fill="#FF8400"/>
+                                <circle cx="100" cy="90" r="1.5" fill="#FF8400"/>
+                                <circle cx="106" cy="90" r="1.5" fill="#FF8400"/>
+                                <rect x="90" y="110" width="20" height="12" rx="2" fill="#0B0829" stroke="#8FA0D8" stroke-width="0.5"/>
+                                <!-- Clip -->
+                                <rect x="80" y="130" width="40" height="6" rx="2" fill="#1a1840" stroke="#8FA0D8" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <div class="arsenal-card__video-wrap">
+                            <video class="arsenal-card__video" autoplay loop muted playsinline>
+                                <source src="https://cdn.coverr.co/videos/coverr-podcast-microphone-3633/1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="arsenal-card__content">
+                        <span class="arsenal-card__tag">Audio Pro</span>
+                        <h3 class="arsenal-card__title">DJI Mic Mini</h3>
+                        <p class="arsenal-card__desc">
+                            Audio de estudio en cualquier locación. Discreto, inalámbrico y con calidad broadcast. Porque un buen reel se ve, pero un reel viral también se escucha. Entrevistas, testimoniales y ASMR gastronómico nítido.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- E) SHOWREEL / PORTAFOLIO -->
+    <!-- ============================================== -->
+    <section class="showreel" id="showreel">
+        <div class="container">
+            <div class="showreel__header" data-reveal>
+                <span class="section__eyebrow">— 03 / Portafolio</span>
+                <h2 class="section__title">Showreel</h2>
+                <p class="section__desc">
+                    Una selección de trabajos donde la marca de nuestros clientes se vuelve protagonista. Cada cuadro está pensado para venderle al algoritmo y al cliente final.
+                </p>
+            </div>
+
+            <!-- Cuadrícula cinemática -->
+            <div class="showreel__grid">
+
+                <div class="reel-item reel-item--large" data-reveal>
+                    <video class="reel-item__video" autoplay loop muted playsinline>
+                        <source src="https://cdn.coverr.co/videos/coverr-chef-preparing-a-burger-7633/1080p.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-item__overlay">
+                        <span class="reel-item__category">Gastronomía</span>
+                        <h3 class="reel-item__title">El arte detrás del platillo</h3>
+                    </div>
+                </div>
+
+                <div class="reel-item" data-reveal>
+                    <video class="reel-item__video" autoplay loop muted playsinline>
+                        <source src="https://cdn.coverr.co/videos/coverr-coffee-art-2633/1080p.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-item__overlay">
+                        <span class="reel-item__category">Café</span>
+                        <h3 class="reel-item__title">Urban Coffee Co.</h3>
+                    </div>
+                </div>
+
+                <div class="reel-item" data-reveal>
+                    <video class="reel-item__video" autoplay loop muted playsinline>
+                        <source src="https://cdn.coverr.co/videos/coverr-fashion-shoot-7633/1080p.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-item__overlay">
+                        <span class="reel-item__category">Moda</span>
+                        <h3 class="reel-item__title">Drop colección verano</h3>
+                    </div>
+                </div>
+
+                <div class="reel-item" data-reveal>
+                    <video class="reel-item__video" autoplay loop muted playsinline>
+                        <source src="https://cdn.coverr.co/videos/coverr-barbershop-haircut-3633/1080p.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-item__overlay">
+                        <span class="reel-item__category">Barbería</span>
+                        <h3 class="reel-item__title">Barbershop &amp; Co.</h3>
+                    </div>
+                </div>
+
+                <div class="reel-item reel-item--wide" data-reveal>
+                    <video class="reel-item__video" autoplay loop muted playsinline>
+                        <source src="https://cdn.coverr.co/videos/coverr-gym-workout-1572/1080p.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-item__overlay">
+                        <span class="reel-item__category">Fitness</span>
+                        <h3 class="reel-item__title">Campaña Fitness Lab MX</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="showreel__cta" data-reveal>
+                <p>¿Quieres ver el reel completo?</p>
+                <a href="#contacto" class="btn btn--ghost">
+                    Solicitar carpeta completa
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- F) CONTACTO + CTA WhatsApp -->
+    <!-- ============================================== -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact__inner">
+
+                <!-- Parallax decorativo -->
+                <div class="contact__decoration" data-parallax="0.2"></div>
+                <div class="contact__decoration contact__decoration--2" data-parallax="0.4"></div>
+
+                <div class="contact__content" data-reveal>
+                    <span class="section__eyebrow">— 04 / Hablemos</span>
+                    <h2 class="contact__title">
+                        Tu próximo reel<br>
+                        <span class="contact__title-accent">empieza con un mensaje.</span>
+                    </h2>
+                    <p class="contact__desc">
+                        Cuéntanos sobre tu negocio, tus objetivos y tu fecha de entrega. Te respondemos en menos de 2 horas con una propuesta a la medida. Sin promesas vacías, sin paquetes genéricos.
+                    </p>
+
+                    <!-- CTA WhatsApp principal -->
+                    <a href="https://wa.me/521234567890?text=Hola%20DEGA%20Motion%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+                        <span class="btn__wa-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                        </span>
+                        <span class="btn__text">Cotizar por WhatsApp</span>
+                        <span class="btn__pulse"></span>
+                    </a>
+
+                    <!-- Info de contacto secundaria -->
+                    <div class="contact__info">
+                        <div class="contact__info-item">
+                            <span class="contact__info-label">Email</span>
+                            <a href="mailto:hola@degamotion.com" class="contact__info-value">hola@degamotion.com</a>
+                        </div>
+                        <div class="contact__info-item">
+                            <span class="contact__info-label">Ubicación</span>
+                            <span class="contact__info-value">Durango, México</span>
+                        </div>
+                        <div class="contact__info-item">
+                            <span class="contact__info-label">Respuesta</span>
+                            <span class="contact__info-value">&lt; 2 horas hábiles</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g>
+                            <circle cx="20" cy="20" r="16" fill="none" stroke="#FF8400" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="6" fill="#FF8400"/>
+                            <circle cx="20" cy="20" r="10" fill="none" stroke="#8FA0D8" stroke-width="1" opacity="0.6"/>
+                        </g>
+                        <text x="48" y="19" font-family="Syncopate, sans-serif" font-size="13" font-weight="700" fill="#F9DFC6" letter-spacing="2">DEGA</text>
+                        <text x="48" y="33" font-family="Syncopate, sans-serif" font-size="9" font-weight="400" fill="#8FA0D8" letter-spacing="3.5">MOTION</text>
+                    </svg>
+                    <p class="footer__tagline">Detenemos el scroll. Elevamos tu marca.</p>
+                </div>
+
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    <a href="#" class="footer__social-link" aria-label="TikTok">TT</a>
+                    <a href="#" class="footer__social-link" aria-label="YouTube">YT</a>
+                    <a href="#" class="footer__social-link" aria-label="Behance">BE</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2025 DEGA Motion · Producción audiovisual con sabor local.</p>
+                <p>Crafted with cinematic obsession.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cursor personalizado (solo desktop) -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-follower" id="customCursorFollower"></div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
