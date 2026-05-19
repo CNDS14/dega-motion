@@ -207,19 +207,60 @@
        6. SMOOTH SCROLL para anclas internas
        ============================================== */
     function initSmoothScroll() {
+        // Seleccionar todos los anchors internos: navbar desktop, móvil y CTAs
         const anchors = document.querySelectorAll('a[href^="#"]');
+
         anchors.forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
-                if (targetId === '#' || targetId.length < 2) return;
+                if (!targetId || targetId === '#' || targetId.length < 2) return;
+
                 const target = document.querySelector(targetId);
                 if (target) {
                     e.preventDefault();
-                    const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
+
+                    // Cerrar menú móvil si está abierto
+                    const navMobileEl = document.getElementById('navMobile');
+                    const navToggleEl = document.getElementById('navToggle');
+                    if (navMobileEl && navMobileEl.classList.contains('is-open')) {
+                        navMobileEl.classList.remove('is-open');
+                        if (navToggleEl) navToggleEl.classList.remove('is-open');
+                        document.body.style.overflow = '';
+                    }
+
+                    // Calcular offset dinámico según el alto real de la navbar
+                    const navbarEl = document.getElementById('navbar');
+                    const navbarHeight = navbarEl ? navbarEl.offsetHeight : 72;
+
+                    const targetRect = target.getBoundingClientRect();
+                    const targetTop = targetRect.top + window.scrollY - navbarHeight - 8;
+
+                    // Smooth scroll con easing cúbico
+                    const startPos = window.scrollY;
+                    const distance = targetTop - startPos;
+                    const duration = Math.min(900, Math.max(400, Math.abs(distance) * 0.5));
+                    let startTime = null;
+
+                    function easeInOutCubic(t) {
+                        return t < 0.5
+                            ? 4 * t * t * t
+                            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                    }
+
+                    function animateScroll(currentTime) {
+                        if (!startTime) startTime = currentTime;
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = easeInOutCubic(progress);
+
+                        window.scrollTo(0, startPos + distance * eased);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        }
+                    }
+
+                    requestAnimationFrame(animateScroll);
                 }
             });
         });
