@@ -351,7 +351,7 @@
                 if (entry.isIntersecting) {
                     const text = entry.target.textContent;
                     if (text.includes('+')) {
-                        animateValue(entry.target, 120, 'plus', 1500);
+                        animateValue(entry.target, 13, 'plus', 1500);
                     } else if (text.includes('K')) {
                         animateValue(entry.target, 4, '4K', 1200);
                     } else if (text.includes('h')) {
