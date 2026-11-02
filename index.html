@@ -178,6 +178,14 @@
     },
     {
      "@type": "Question",
+     "name": "¿Con qué equipo graban?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Grabamos con iPhone 15, DJI Osmo Pocket 3, DJI Osmo Mobile SE, micrófono DJI Mic Mini y dron DJI Mini 3 con video en 4K. Para tomas POV usamos lentes Ray-Ban Meta, que van en el paquete corporativo o se cotizan aparte."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "¿Cuánto tardan en entregar?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -479,6 +487,46 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
 .up{color:var(--lat)}
 .wa{position:fixed;right:18px;bottom:18px;z-index:230;background:var(--lat);color:var(--bos);padding:15px 22px;border-radius:99px;font-weight:700;box-shadow:0 6px 24px rgba(0,0,0,.35)}
 
+
+/* equipo: maleta de rodaje */
+.gear{background:var(--mus)}
+.case-wrap{display:flex;flex-wrap:wrap;gap:56px 48px;align-items:flex-start;margin-top:46px}
+.case{flex:1 1 560px;min-width:0;position:relative;background:#16241f;border:8px solid #0a120f;border-radius:20px;padding:26px;box-shadow:0 28px 60px rgba(0,0,0,.45),inset 0 0 0 2px rgba(241,235,221,.07)}
+.latch{position:absolute;width:60px;height:20px;border-radius:5px;background:linear-gradient(#d9d1bd,#8c8778);top:-17px;box-shadow:0 2px 0 rgba(0,0,0,.4)}
+.latch.l1{left:14%}.latch.l2{right:14%}
+.foam{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:172px;gap:14px;background-color:#08110d;padding:14px;border-radius:12px;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.2px);background-size:7px 7px}
+.cut{position:relative;border:0;border-radius:18px;background:#030907;box-shadow:inset 0 8px 18px rgba(0,0,0,.9),inset 0 0 0 2px rgba(0,0,0,.7);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--lat);padding:14px;font-family:inherit;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.cut svg{width:100%;height:100%;max-height:104px;filter:drop-shadow(0 8px 6px rgba(0,0,0,.7));transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.cut:hover svg{transform:translateY(-6px) rotate(-2deg)}
+.cut[aria-pressed=true]{box-shadow:inset 0 8px 18px rgba(0,0,0,.9),0 0 0 3px var(--lat)}
+.cut[aria-pressed=true] svg{transform:translateY(-8px) scale(1.06)}
+.cut.w2{grid-column:span 2}
+.cut:focus-visible{outline:3px solid var(--lat);outline-offset:3px}
+.cut .lb{position:absolute;left:14px;bottom:10px;font:500 10px 'DM Mono',monospace;letter-spacing:2px;color:rgba(241,235,221,.55)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cnote{position:absolute;right:20px;bottom:-46px;transform:rotate(-3deg);font-size:28px}
+.tagcard{flex:0 1 410px;min-width:280px;width:100%;background:var(--hue);color:var(--bos);padding:34px 28px 26px;position:sticky;top:96px;transform:rotate(1.2deg);box-shadow:10px 10px 0 rgba(0,0,0,.35)}
+.tagcard::before{content:"";position:absolute;left:50%;top:-12px;width:24px;height:24px;border-radius:50%;background:var(--mus);border:4px solid var(--hue);transform:translateX(-50%)}
+.tagcard .k{font:500 11px 'DM Mono',monospace;letter-spacing:2px;color:var(--tinta)}
+.tagcard h3{font-size:clamp(30px,3.4vw,40px);letter-spacing:-1.4px;line-height:1;margin-top:8px}
+.tagcard .gt{font:500 13px 'DM Mono',monospace;margin:6px 0 0;letter-spacing:1px}
+.tagcard p{margin:12px 0 0;font-size:16px}
+.tagcard ul{margin:12px 0 0;padding:0;list-style:none}
+.tagcard li{padding:6px 0;border-top:1px dashed rgba(12,31,25,.4);font-size:15px}
+.tagcard li::before{content:"▸";color:var(--tinta);margin-right:8px}
+.gclip{margin-top:16px;position:relative;background:var(--bos);aspect-ratio:4/3;overflow:hidden;display:flex;align-items:center;justify-content:center;border:3px solid var(--bos)}
+.gclip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gclip.none{display:none}
+.gclip .hand{position:absolute;left:12px;bottom:8px;font-size:26px;color:var(--hue);text-shadow:0 2px 8px rgba(0,0,0,.8);z-index:2;transform:rotate(-3deg)}
+.sbar{display:flex;align-items:center;gap:22px;margin-top:10px;flex-wrap:wrap}
+.sbar .hand{margin:0}
+.sbtn{display:flex;gap:10px}
+.sbtn button{width:46px;height:46px;border-radius:50%;border:2px solid var(--hue);background:transparent;color:var(--hue);font:500 20px 'DM Mono',monospace;cursor:pointer;transition:background .2s,color .2s}
+.sbtn button:hover{background:var(--hue);color:var(--bos)}
+.wa{transition:opacity .3s,transform .3s}
+.wa.hide{opacity:0;pointer-events:none;transform:translateY(20px)}
+@media (max-width:900px){.cnote{position:static;transform:rotate(-2deg);margin:16px 0 0;text-align:right}}
+@media (max-width:640px){.foam{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.cut.w2{grid-column:span 2}.case{padding:18px}.tagcard{position:static}}
 @media (max-width:900px){.rico-note,.hud,.bk,.sheet-note{display:none}.stamp{right:14px}.hero p.lead{margin-top:30px}}
 @media (max-width:760px){
   .cs thead{display:none}
@@ -515,7 +563,7 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
       dega motion
     </a>
     <nav class="links" aria-label="Principal">
-      <a href="#servicios">servicios</a><a href="#trabajos">trabajos</a><a href="#paquetes">paquetes</a><a href="#armar">arma el tuyo</a><a href="#preguntas">preguntas</a><a href="#contacto">contacto</a>
+      <a href="#servicios">servicios</a><a href="#equipo">equipo</a><a href="#trabajos">trabajos</a><a href="#paquetes">paquetes</a><a href="#armar">arma el tuyo</a><a href="#preguntas">preguntas</a><a href="#contacto">contacto</a>
     </nav>
     <a class="btn btn-lat mag" style="padding:12px 24px;font-size:15px" href="https://wa.me/526182003272?text=Hola%20DEGA%20Motion%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">cotizar por whatsapp</a>
   </div>
@@ -579,17 +627,47 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
       </table>
       <div class="sh-foot">
         <div><b>PARA</b>restaurantes y cafés · bares y antros · inmobiliarias · tiendas y servicios · fundaciones y marcas grandes</div>
-        <div><b>EQUIPO</b>iPhone 15, DJI Osmo Pocket 3, DJI Osmo Mobile SE, micrófono DJI Mic Mini, dron DJI Mini 3 y lentes Ray-Ban Meta para tomas POV.</div>
+        <div><b>EQUIPO</b>Seis piezas entre cámaras, dron y micrófono. <a href="#equipo" style="text-decoration:underline;text-underline-offset:4px">conócelas →</a></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo" class="gear">
+  <div class="wrap sec">
+    <div class="tag rv">02 · el equipo</div>
+    <h2 class="rv">el equipo con el que grabamos</h2>
+    <p class="rv" style="max-width:640px;font-size:18px;margin:14px 0 0;opacity:.92">Todo cabe en una maleta. Toca cada pieza para ver para qué sirve y un trabajo hecho con ella.</p>
+    <div class="case-wrap">
+      <div class="case rv">
+        <span class="latch l1" aria-hidden="true"></span><span class="latch l2" aria-hidden="true"></span>
+        <div class="foam" role="group" aria-label="Equipo de producción">
+        <button type="button" class="cut w2" data-g="mini" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="46" y="48" width="28" height="22" rx="5"/><path d="M46 52L22 30M74 52l24-22M46 66L22 88M74 66l24 22"/><circle cx="18" cy="26" r="9"/><circle cx="102" cy="26" r="9"/><circle cx="18" cy="92" r="9"/><circle cx="102" cy="92" r="9"/><circle cx="60" cy="59" r="5"/></svg><span class="lb" aria-hidden="true">DRON</span><span class="sr">DJI Mini 3, dron con video 4K</span></button>
+        <button type="button" class="cut" data-g="pocket" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="44" y="44" width="32" height="64" rx="12"/><rect x="50" y="58" width="20" height="24" rx="3"/><circle cx="60" cy="27" r="14"/><path d="M40 27a20 20 0 0 1 40 0"/><circle cx="60" cy="27" r="5"/><path d="M54 94h12"/></svg><span class="lb" aria-hidden="true">GIMBAL</span><span class="sr">DJI Osmo Pocket 3, cámara con estabilizador</span></button>
+        <button type="button" class="cut" data-g="iphone" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="34" y="8" width="52" height="104" rx="11"/><path d="M52 16h16"/><rect x="42" y="22" width="24" height="24" rx="7"/><circle cx="49" cy="29" r="4"/><circle cx="59" cy="29" r="4"/><circle cx="54" cy="39" r="4"/></svg><span class="lb" aria-hidden="true">CELULAR</span><span class="sr">iPhone 15, cámara del celular</span></button>
+        <button type="button" class="cut" data-g="mobile" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="52" y="52" width="16" height="58" rx="8"/><path d="M60 52V44"/><rect x="28" y="8" width="64" height="36" rx="6"/><circle cx="82" cy="18" r="3"/><path d="M40 26h30"/><path d="M56 70h8M56 80h8"/></svg><span class="lb" aria-hidden="true">ESTABILIZADOR</span><span class="sr">DJI Osmo Mobile SE, estabilizador para celular</span></button>
+        <button type="button" class="cut" data-g="mic" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="40" y="26" width="40" height="48" rx="9"/><circle cx="52" cy="40" r="2"/><circle cx="60" cy="40" r="2"/><circle cx="68" cy="40" r="2"/><circle cx="52" cy="50" r="2"/><circle cx="60" cy="50" r="2"/><circle cx="68" cy="50" r="2"/><rect x="50" y="74" width="20" height="14" rx="3"/><path d="M60 88v14"/></svg><span class="lb" aria-hidden="true">AUDIO</span><span class="sr">DJI Mic Mini, micrófono inalámbrico</span></button>
+        <button type="button" class="cut w2" data-g="rayban" aria-pressed="false"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="40" width="42" height="34" rx="12"/><rect x="68" y="40" width="42" height="34" rx="12"/><path d="M52 52q8-6 16 0"/><path d="M10 50L4 40M110 50l6-10"/><circle cx="18" cy="48" r="3"/></svg><span class="lb" aria-hidden="true">POV</span><span class="sr">Ray-Ban Meta, lentes con cámara para tomas POV</span></button>
+        </div>
+        <p class="hand cnote" aria-hidden="true">todo esto cabe en una maleta</p>
+      </div>
+      <aside class="tagcard rv" aria-live="polite" id="gCard">
+        <div class="k" id="gU">FICHA DE EQUIPO · AÉREA</div>
+        <h3 id="gNom">DJI Mini 3</h3>
+        <p class="gt" id="gTipo">dron con video 4K</p>
+        <p id="gTxt"></p>
+        <ul id="gUsos"></ul>
+        <div class="gclip" id="gClip"><video id="gVid" muted loop playsinline preload="none" aria-label="Trabajo hecho con este equipo"></video><span class="hand" aria-hidden="true">de nuestros trabajos</span></div>
+      </aside>
     </div>
   </div>
 </section>
 
 <section id="trabajos">
   <div class="wrap" style="padding-top:84px">
-    <div class="tag rv">02 · trabajos recientes</div>
+    <div class="tag rv">03 · trabajos recientes</div>
     <h2 class="rv">lo que ya grabamos</h2>
-    <p class="hand rv" style="margin-top:10px" aria-hidden="true">arrastra la tira →</p>
+    <div class="sbar rv"><p class="hand" aria-hidden="true">arrastra la tira →</p><div class="sbtn"><button type="button" id="sprev" aria-label="Trabajos anteriores">←</button><button type="button" id="snext" aria-label="Trabajos siguientes">→</button></div></div>
   </div>
   <div class="strip" id="strip" tabindex="0" role="region" aria-label="Trabajos recientes. Desliza para ver más.">
     <article class="fr" style="--r:-1.6deg;--y:0px"><div class="film"><span class="no">12A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto,w_720,so_3/Dia_ni%C3%B1o_2_e3r2ym.jpg" muted loop playsinline preload="none" aria-label="Reel de YoYo's Arcade"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto/Dia_ni%C3%B1o_2_e3r2ym.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">yoyo's arcade</h3><small>reel comercial</small></div></article>
@@ -605,9 +683,9 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
   <div class="wrap sec">
     <div class="menu-wrap">
       <div class="menu-l">
-        <div class="tag rv">03 · paquetes</div>
+        <div class="tag rv">04 · paquetes</div>
         <h2 class="rv">elige tu tamaño</h2>
-        <p class="rv">Cinco paquetes con precio fijo y sin letras chiquitas. Si ninguno te queda, lo armamos a la medida.</p>
+        <p class="rv">Cinco paquetes con el precio a la vista. Si ninguno te queda, lo armamos a la medida.</p>
         <div class="ex rv"><b>EXTRAS</b>Grabación en crudo $590 (hasta 2 h, sin edición) · vuelo de dron $590 (en la misma jornada de otro paquete). Fuera de catálogo, cotización a la medida. Precios en pesos mexicanos.</div>
         <p class="hand rv" style="margin-top:22px" aria-hidden="true">toca "armar este" y te armamos el mensaje →</p>
       </div>
@@ -627,7 +705,7 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
 
 <section id="armar">
   <div class="wrap sec">
-    <div class="tag rv">04 · arma el tuyo</div>
+    <div class="tag rv">05 · arma el tuyo</div>
     <h2 class="rv">dinos qué necesitas</h2>
     <p class="rv" style="max-width:620px;opacity:.92;margin:14px 0 0;font-size:18px">Elige tres cosas y te decimos qué paquete te conviene. Con un toque te abre WhatsApp con el mensaje ya escrito.</p>
     <div class="arm">
@@ -675,7 +753,7 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
 
 <section id="proceso" class="paper">
   <div class="wrap sec">
-    <div class="tag rv">05 · proceso</div>
+    <div class="tag rv">06 · proceso</div>
     <h2 class="rv">así de simple</h2>
     <div class="story">
       <div class="pn rv" style="--d:0ms"><div class="pic"><svg viewBox="0 0 160 120" fill="none" stroke="#0C1F19" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="50" y="10" width="60" height="100" rx="10"/><path d="M62 38h30a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H78l-8 8v-8h-8a6 6 0 0 1-6-6V44a6 6 0 0 1 6-6z" stroke="#6B5018"/><path d="M68 80h26M68 90h16"/></svg></div><span class="k">PLANO 1</span><h3>cotizas</h3><p>Nos escribes por WhatsApp y te respondemos con paquete y fecha.</p></div>
@@ -688,11 +766,12 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
 
 <section id="preguntas" class="alt" style="background:var(--mus)">
   <div class="wrap sec">
-    <div class="tag rv">06 · preguntas</div>
+    <div class="tag rv">07 · preguntas</div>
     <h2 class="rv">lo que más nos preguntan</h2>
     <div class="faq rv">
       <details name="faq"><summary>¿Cuánto cuesta un reel para mi negocio?</summary><p>Un reel de 20 a 30 segundos cuesta $790 MXN en el paquete básico. Los paquetes van de $790 a $5,500 MXN según lo que necesites. Puedes armar el tuyo en esta misma página.</p></details>
       <details name="faq"><summary>¿Hacen video con dron?</summary><p>Sí. El paquete aéreo ($1,290 MXN) incluye 1 reel y 5 fotografías aéreas, y el vuelo de dron se puede sumar a otro paquete por $590 MXN. El vuelo depende del clima, sin lluvia ni viento fuerte; si no se puede volar, reagendamos sin costo.</p></details>
+      <details name="faq"><summary>¿Con qué equipo graban?</summary><p>Grabamos con iPhone 15, DJI Osmo Pocket 3, DJI Osmo Mobile SE, micrófono DJI Mic Mini y dron DJI Mini 3 con video en 4K. Para tomas POV usamos lentes Ray-Ban Meta, que van en el paquete corporativo o se cotizan aparte.</p></details>
       <details name="faq"><summary>¿Cuánto tardan en entregar?</summary><p>La entrega es de 3 a 5 días hábiles después de la grabación.</p></details>
       <details name="faq"><summary>¿Qué tipo de negocios atienden?</summary><p>Restaurantes, cafés, bares, inmobiliarias, tiendas y servicios, fundaciones y marcas grandes. Si no ves el tuyo, escríbenos y lo platicamos.</p></details>
       <details name="faq"><summary>¿Dónde trabajan?</summary><p>Estamos en Durango, México, y grabamos en la ciudad y sus alrededores. Si tu negocio está en otro lugar, escríbenos y te decimos si podemos ir.</p></details>
@@ -727,7 +806,7 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
   <div class="wrap">
     <div class="fgrid">
       <div><a class="brand" href="#inicio" style="font-size:24px;padding:0;display:flex" aria-label="DEGA Motion, inicio"><svg viewBox="0 0 100 100" aria-hidden="true" style="width:30px;height:30px"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg>dega motion</a><p>hacemos que se vea rico.</p><p>Producción audiovisual en Durango, México.</p></div>
-      <div><div class="fh">secciones</div><a href="#servicios">servicios</a><a href="#trabajos">trabajos</a><a href="#paquetes">paquetes</a><a href="#armar">arma el tuyo</a><a href="#preguntas">preguntas</a></div>
+      <div><div class="fh">secciones</div><a href="#servicios">servicios</a><a href="#equipo">equipo</a><a href="#trabajos">trabajos</a><a href="#paquetes">paquetes</a><a href="#armar">arma el tuyo</a><a href="#preguntas">preguntas</a></div>
       <div><div class="fh">contacto</div><a href="https://wa.me/526182003272?text=Hola%20DEGA%20Motion%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">whatsapp 618 200 3272</a><a href="mailto:degamotion@outlook.com">degamotion@outlook.com</a></div>
       <div><div class="fh">redes</div><a href="https://www.instagram.com/degamotion/" target="_blank" rel="noopener">instagram @degamotion</a><a href="https://www.facebook.com/profile.php?id=61576792566848" target="_blank" rel="noopener">facebook</a></div>
     </div>
@@ -858,8 +937,46 @@ footer .brand{font-family:'Outfit',sans-serif;letter-spacing:-1.5px}
     });
   });
 
+
+  // equipo: la maleta
+  var GEAR = {
+    mini: {n: 'DJI Mini 3', t: 'dron con video 4K', u: 'AÉREA', x: 'Dron ligero que sube la cámara para mostrar tu negocio desde arriba, con video en 4K y fotografías aéreas HDR.', us: ['fachadas, terrazas y estacionamientos', 'tomas reveal del lugar', 'fotografías aéreas'], clip: 'Sagrado_Corazon_Hori_stzb1b'},
+    pocket: {n: 'DJI Osmo Pocket 3', t: 'cámara con estabilizador', u: 'TIERRA', x: 'Cámara pequeña con gimbal que graba movimiento suave y detalle de cerca.', us: ['tomas de cocina y barra', 'POV de preparación', 'reels con movimiento estabilizado'], clip: 'Pov_Barista_ZigZag_tm44i4'},
+    iphone: {n: 'iPhone 15', t: 'cámara del celular', u: 'TIERRA', x: 'La cámara que siempre llevamos: reels verticales, también con poca luz y para entrevistas.', us: ['reels verticales', 'poca luz', 'entrevistas'], clip: 'YoYo_s_Arcade_Comida_dacuke'},
+    mobile: {n: 'DJI Osmo Mobile SE', t: 'estabilizador para celular', u: 'TIERRA', x: 'Estabilizador para el celular: permite caminar por tu negocio con planos largos y movimiento suave.', us: ['planos largos caminando', 'reels verticales con movimiento', 'transiciones y giros'], clip: 'YoYo_s_Arcade_Ice_Beer_lazjue'},
+    mic: {n: 'DJI Mic Mini', t: 'micrófono inalámbrico', u: 'TIERRA', x: 'Micrófono pequeño que se prende a la ropa para que la voz se escuche limpia.', us: ['entrevistas', 'voz clara en reels'], clip: 'v1c044g50000d5vcu9fog65stl75s5dg_btlpbm'},
+    rayban: {n: 'Ray-Ban Meta (Gen 1)', t: 'lentes con cámara', u: 'INMERSIVA', x: 'Lentes con cámara para grabar desde tu punto de vista, sin manos. Van en el paquete corporativo o se cotizan aparte.', us: ['tomas POV inmersivas', 'recorridos sin manos'], clip: null}
+  };
+  var CLD = 'https://res.cloudinary.com/ducmuwzmg/video/upload/';
+  var cuts = $$('.cut');
+  function pickGear(id){
+    var g = GEAR[id]; if (!g) return;
+    cuts.forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-g') === id ? 'true' : 'false'); });
+    $('#gU').textContent = 'FICHA DE EQUIPO · ' + g.u; $('#gNom').textContent = g.n; $('#gTipo').textContent = g.t; $('#gTxt').textContent = g.x;
+    $('#gUsos').innerHTML = g.us.map(function(u){ return '<li>' + u + '</li>'; }).join('');
+    var box = $('#gClip'), v = $('#gVid');
+    if (!g.clip) { box.classList.add('none'); try{ v.pause(); }catch(e){} return; }
+    box.classList.remove('none');
+    v.setAttribute('poster', CLD + 'f_auto,q_auto,w_540,so_2/' + g.clip + '.jpg');
+    v.src = CLD + 'f_auto,q_auto/' + g.clip + '.mp4';
+    if (!reduce) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+  }
+  cuts.forEach(function(c){ c.addEventListener('click', function(){ pickGear(c.getAttribute('data-g')); if (window.innerWidth < 900) { var cd = $('#gCard'); if (cd) cd.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'}); } }); });
+  pickGear('mini');
+
+  // flechas de la tira de trabajos
+  var sp = $('#sprev'), sn = $('#snext');
+  if (sp && sn && strip) {
+    sp.addEventListener('click', function(){ strip.scrollBy({left: -290, behavior: reduce ? 'auto' : 'smooth'}); });
+    sn.addEventListener('click', function(){ strip.scrollBy({left: 290, behavior: reduce ? 'auto' : 'smooth'}); });
+  }
+
+  // el botón flotante se esconde cuando ya estás en contacto
+  var wa = $('.wa'), ct = $('#contacto');
+  if (wa && ct && 'IntersectionObserver' in window) new IntersectionObserver(function(es){ wa.classList.toggle('hide', es[0].isIntersecting); }, {threshold: .25}).observe(ct);
+
   // sección activa en el menú
-  var secs = ['servicios','trabajos','paquetes','armar','preguntas','contacto'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  var secs = ['servicios','equipo','trabajos','paquetes','armar','preguntas','contacto'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
   if ('IntersectionObserver' in window) {
     var spy = new IntersectionObserver(function(es){
       es.forEach(function(e){
