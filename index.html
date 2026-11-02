@@ -31,7 +31,10 @@
 <link rel="alternate" hreflang="x-default" href="https://degamotion.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+<link rel="preload" as="image" href="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_540,so_0/YoYos_Arcade_1_yzshin.jpg" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap"></noscript>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -320,7 +323,7 @@ header{position:sticky;top:0;z-index:200;background:rgba(12,31,25,.92);backdrop-
 .hero .txt{flex:1 1 540px;min-width:0}
 .greet{display:inline-block;transform:rotate(-2deg);margin-bottom:6px}
 .hero h1{font-size:clamp(54px,9.4vw,118px);line-height:.9;letter-spacing:-.058em;margin-top:6px}
-.hero h1 .w{display:inline-block;opacity:0;transform:translateY(46px);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*110ms + 150ms)}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(46px);animation:up .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 60ms)}
 @keyframes up{to{opacity:1;transform:none}}
 .hl{position:relative;display:inline-block;color:var(--lat);font-style:normal}
 .scr{position:absolute;left:-2%;bottom:-.1em;width:104%;height:.22em;overflow:visible}
@@ -365,6 +368,8 @@ table.cs{width:100%;border-collapse:collapse}
 .cs th{font:500 11px 'DM Mono',monospace;letter-spacing:2px;text-align:left;padding:12px 10px 8px;border-bottom:2px solid var(--bos);color:var(--tinta)}
 .cs td{padding:20px 10px;border-bottom:1px solid rgba(12,31,25,.22);vertical-align:top;font-size:16px}
 .cs td.n,.cs td.t{font:500 14px 'DM Mono',monospace;width:56px}
+.cs td.s a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:transparent;transition:text-decoration-color .2s}
+.cs td.s a:hover{text-decoration-color:var(--bos)}
 .cs td.s{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-1.2px;line-height:1;width:30%}
 .cs td.p{font-weight:700;white-space:nowrap;text-align:right;font-size:18px}
 .cs td.p span{background:var(--lat);padding:3px 9px}
@@ -672,7 +677,7 @@ footer{background:#050d0a}
       <div class="tilt" id="tilt">
         <div class="circle">
           <svg viewBox="0 0 100 100" aria-hidden="true" style="width:30%;opacity:.9"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg>
-          <video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto,w_720,so_0/YoYos_Arcade_1_yzshin.jpg" muted loop playsinline preload="metadata" autoplay aria-label="Showreel de DEGA Motion"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto/YoYos_Arcade_1_yzshin.mp4" type="video/mp4"></video>
+          <video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_540,so_0/YoYos_Arcade_1_yzshin.jpg" muted loop playsinline preload="metadata" autoplay aria-label="Showreel de DEGA Motion"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_720/YoYos_Arcade_1_yzshin.mp4" type="video/mp4"></video>
           <div class="glare"></div>
         </div>
       </div>
@@ -699,9 +704,9 @@ footer{background:#050d0a}
       <table class="cs">
         <thead><tr><th>ESC</th><th>TOMA</th><th>SERVICIO</th><th>QUÉ INCLUYE</th><th style="text-align:right">DESDE</th></tr></thead>
         <tbody>
-          <tr><td class="n">01</td><td class="t">A</td><td class="s">reels para redes</td><td>Reels de 20 a 30 segundos, grabados y editados con color y música en tendencia. Desde un reel para probar hasta cuatro al mes.</td><td class="p"><span>$790</span><a href="#paquetes">ver paquetes →</a></td></tr>
-          <tr><td class="n">02</td><td class="t">B</td><td class="s">video aéreo con dron</td><td>Tomas de altura y fotografías aéreas para mostrar fachadas, terrazas e instalaciones. Grabamos con dron DJI Mini 3 en 4K.</td><td class="p"><span>$1,290</span><a href="#paquetes">ver paquete →</a></td></tr>
-          <tr><td class="n">03</td><td class="t">C</td><td class="s">video corporativo</td><td>Un video 16:9 con color y tomas POV inmersivas para inmobiliarias, fundaciones y marcas grandes.</td><td class="p"><span>$3,990</span><a href="#armar">cotizar →</a></td></tr>
+          <tr><td class="n">01</td><td class="t">A</td><td class="s"><a href="/reels-para-negocios/">reels para redes</a></td><td>Reels de 20 a 30 segundos, grabados y editados con color y música en tendencia. Desde un reel para probar hasta cuatro al mes.</td><td class="p"><span>$790</span><a href="/reels-para-negocios/">ver reels →</a></td></tr>
+          <tr><td class="n">02</td><td class="t">B</td><td class="s"><a href="/video-aereo-con-dron/">video aéreo con dron</a></td><td>Tomas de altura y fotografías aéreas para mostrar fachadas, terrazas e instalaciones. Grabamos con dron DJI Mini 3 en 4K.</td><td class="p"><span>$1,290</span><a href="/video-aereo-con-dron/">ver video aéreo →</a></td></tr>
+          <tr><td class="n">03</td><td class="t">C</td><td class="s"><a href="/video-corporativo/">video corporativo</a></td><td>Un video 16:9 con color y tomas POV inmersivas para inmobiliarias, fundaciones y marcas grandes.</td><td class="p"><span>$3,990</span><a href="/video-corporativo/">ver corporativo →</a></td></tr>
           <tr><td class="n">04</td><td class="t">D</td><td class="s">contenido cada mes</td><td>Reels e historias para que tu negocio publique sin parar, con los paquetes mensual y crecimiento.</td><td class="p"><span>$2,490</span><a href="#armar">armar el mío →</a></td></tr>
         </tbody>
       </table>
@@ -748,10 +753,10 @@ footer{background:#050d0a}
     <div class="sbar rv"><p class="hand" aria-hidden="true">arrastra la tira →</p><div class="sbtn"><button type="button" id="sprev" aria-label="Trabajos anteriores">←</button><button type="button" id="snext" aria-label="Trabajos siguientes">→</button></div></div>
   </div>
   <div class="strip" id="strip" tabindex="0" role="region" aria-label="Trabajos recientes. Desliza para ver más.">
-    <article class="fr" style="--r:-1.6deg;--y:0px"><div class="film"><span class="no">12A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto,w_720,so_3/Dia_ni%C3%B1o_2_e3r2ym.jpg" muted loop playsinline preload="none" aria-label="Reel de YoYo's Arcade"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto/Dia_ni%C3%B1o_2_e3r2ym.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">yoyo's arcade</h3><small>reel comercial</small></div></article>
-    <article class="fr" style="--r:1.2deg;--y:34px"><div class="film"><span class="no">13A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto,w_720,so_0/Reel_ZigZag_Coffee_ss3qew.jpg" muted loop playsinline preload="none" aria-label="Reel de ZigZag Coffee"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto/Reel_ZigZag_Coffee_ss3qew.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">zigzag coffee</h3><small>reel comercial</small></div></article>
+    <article class="fr" style="--r:-1.6deg;--y:0px"><div class="film"><span class="no">12A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_480,so_3/Dia_ni%C3%B1o_2_e3r2ym.jpg" muted loop playsinline preload="none" aria-label="Reel de YoYo's Arcade"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_540/Dia_ni%C3%B1o_2_e3r2ym.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">yoyo's arcade</h3><small>reel comercial</small></div></article>
+    <article class="fr" style="--r:1.2deg;--y:34px"><div class="film"><span class="no">13A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_480,so_3/Reel_ZigZag_Coffee_ss3qew.jpg" muted loop playsinline preload="none" aria-label="Reel de ZigZag Coffee"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_540/Reel_ZigZag_Coffee_ss3qew.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">zigzag coffee</h3><small>reel comercial</small></div></article>
     <article class="fr" style="--r:-.8deg;--y:10px"><div class="film"><span class="no">14A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="assets/trabajo-mezcaleria-don-juan.jpg" muted loop playsinline preload="none" aria-label="Reel de Mezcalería Don Juan"><source src="assets/trabajo-mezcaleria-don-juan.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">mezcalería don juan</h3><small>reel comercial</small></div></article>
-    <article class="fr" style="--r:1.8deg;--y:42px"><div class="film"><span class="no">15A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto,w_720,so_0/Catedral_Y_Plaza_ktuebb.jpg" muted loop playsinline preload="none" aria-label="Tomas aéreas con dron"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto/Catedral_Y_Plaza_ktuebb.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">tomas aéreas</h3><small>video con dron</small></div></article>
+    <article class="fr" style="--r:1.8deg;--y:42px"><div class="film"><span class="no">15A</span><div class="mv" data-cur="ver"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg><video data-slot poster="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_480,so_3/Catedral_Y_Plaza_ktuebb.jpg" muted loop playsinline preload="none" aria-label="Tomas aéreas con dron"><source src="https://res.cloudinary.com/ducmuwzmg/video/upload/f_auto,q_auto:eco,c_limit,w_540/Catedral_Y_Plaza_ktuebb.mp4" type="video/mp4"></video></div></div><div class="cap"><h3 class="hand">tomas aéreas</h3><small>video con dron</small></div></article>
     <a class="fr next" href="#armar" style="--r:-1deg;--y:16px"><div class="film"><span class="no">16A</span><div class="mv"><span class="hand">el siguiente fotograma es tu negocio</span><span class="btn btn-lat">armar mi paquete</span></div></div><div class="cap"><small>sigues tú</small></div></a>
   </div>
   <div class="wrap" style="padding-bottom:clamp(84px,9vw,136px)"><p style="margin:0"><a class="btn btn-line" href="https://www.instagram.com/degamotion/" target="_blank" rel="noopener">ver más en instagram</a></p></div>
@@ -880,6 +885,7 @@ footer{background:#050d0a}
   <div class="wrap">
     <div class="fgrid">
       <div><a class="brand" href="#inicio" style="font-size:24px;padding:0;display:flex" aria-label="DEGA Motion, inicio"><svg viewBox="0 0 100 100" aria-hidden="true" style="width:30px;height:30px"><circle cx="50" cy="50" r="50" fill="#C9A24B"/><polygon points="40,28 40,72 76,50" fill="#0C1F19"/></svg>dega motion</a><p>hacemos que se vea rico.</p><p>Producción audiovisual en Durango, México.</p></div>
+      <div><div class="fh">servicios</div><a href="/reels-para-negocios/">reels para negocios</a><a href="/video-aereo-con-dron/">video aéreo con dron</a><a href="/video-corporativo/">video corporativo</a></div>
       <div><div class="fh">secciones</div><a href="#servicios">servicios</a><a href="#equipo">equipo</a><a href="#trabajos">trabajos</a><a href="#paquetes">paquetes</a><a href="#armar">arma el tuyo</a><a href="#preguntas">preguntas</a></div>
       <div><div class="fh">contacto</div><a href="https://wa.me/526182003272?text=Hola%20DEGA%20Motion%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">whatsapp 618 200 3272</a><a href="mailto:degamotion@outlook.com">degamotion@outlook.com</a></div>
       <div><div class="fh">redes</div><a href="https://www.instagram.com/degamotion/" target="_blank" rel="noopener">instagram @degamotion</a><a href="https://www.facebook.com/profile.php?id=61576792566848" target="_blank" rel="noopener">facebook</a></div>
@@ -1055,7 +1061,7 @@ footer{background:#050d0a}
   };
   var CLD = 'https://res.cloudinary.com/ducmuwzmg/video/upload/';
   var cuts = $$('.cut');
-  function pickGear(id){
+  function pickGear(id, load){
     var g = GEAR[id]; if (!g) return;
     cuts.forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-g') === id ? 'true' : 'false'); });
     $('#gU').textContent = 'FICHA DE EQUIPO · ' + g.u; $('#gNom').textContent = g.n; $('#gTipo').textContent = g.t; $('#gTxt').textContent = g.x;
@@ -1063,12 +1069,15 @@ footer{background:#050d0a}
     var box = $('#gClip'), v = $('#gVid');
     if (!g.clip) { box.classList.add('none'); try{ v.pause(); }catch(e){} return; }
     box.classList.remove('none');
-    v.setAttribute('poster', CLD + 'f_auto,q_auto,w_540,so_2/' + g.clip + '.jpg');
-    v.src = CLD + 'f_auto,q_auto/' + g.clip + '.mp4';
+    v.setAttribute('poster', CLD + 'f_auto,q_auto:eco,c_limit,w_480,so_2/' + g.clip + '.jpg');
+    if (!load) return;
+    v.src = CLD + 'f_auto,q_auto:eco,c_limit,w_640/' + g.clip + '.mp4';
     if (!reduce) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
   }
-  cuts.forEach(function(c){ c.addEventListener('click', function(){ pickGear(c.getAttribute('data-g')); if (window.innerWidth < 900) { var cd = $('#gCard'); if (cd) cd.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'}); } }); });
-  pickGear('mini');
+  cuts.forEach(function(c){ c.addEventListener('click', function(){ pickGear(c.getAttribute('data-g'), true); if (window.innerWidth < 900) { var cd = $('#gCard'); if (cd) cd.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'}); } }); });
+  pickGear('mini', false);
+  var eq = $('#equipo');
+  if (eq && 'IntersectionObserver' in window) { var eqo = new IntersectionObserver(function(es){ if (es[0].isIntersecting) { eqo.disconnect(); var cur = $('.cut[aria-pressed="true"]'); pickGear(cur ? cur.getAttribute('data-g') : 'mini', true); } }, {rootMargin: '300px 0px'}); eqo.observe(eq); }
 
   // flechas de la tira de trabajos
   var sp = $('#sprev'), sn = $('#snext');
@@ -1150,7 +1159,9 @@ function init(THREE){
   try { renderer = new THREE.WebGLRenderer({canvas: cv, alpha: true, antialias: true, powerPreference: 'low-power'}); }
   catch (e) { document.documentElement.classList.add('no-webgl'); return; }
   var small = window.innerWidth < 700;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2));
+  var lowEnd = small || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lowEnd ? 1.25 : 2));
+  var minDt = lowEnd ? 33 : 0, lastR = 0;
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(35, 1, 0.1, 50); camera.position.z = 8;
 
@@ -1217,11 +1228,11 @@ function init(THREE){
     if (fl > 0) { fl = Math.max(0, fl - dt * 1.6); flash.material.opacity = fl * 0.9; flash.scale.setScalar(1 + (1 - fl) * 0.28); } else flash.material.opacity = 0;
     renderer.render(scene, camera);
   }
-  function loop(){ if (!visible || document.hidden) return; requestAnimationFrame(function(t){ frame(t); loop(); }); }
+  function loop(){ if (!visible || document.hidden) return; requestAnimationFrame(function(t){ if (t - lastR >= minDt) { lastR = t; frame(t); } loop(); }); }
   document.addEventListener('visibilitychange', function(){ if (!document.hidden && visible) { last = performance.now(); loop(); } });
   if (reduce) { frame(performance.now()); } else { loop(); }
 }
-function boot(){ import('three').then(init).catch(function(){ document.documentElement.classList.add('no-webgl'); }); }
+function boot(){ if (navigator.connection && navigator.connection.saveData) { document.documentElement.classList.add('no-webgl'); return; } import('three').then(init).catch(function(){ document.documentElement.classList.add('no-webgl'); }); }
 function later(){ if (window.requestIdleCallback) requestIdleCallback(boot, {timeout: 1500}); else setTimeout(boot, 300); }
 if (document.readyState === 'complete') later(); else addEventListener('load', later);
 </script>
