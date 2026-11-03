@@ -420,6 +420,7 @@ table.cs{width:100%;border-collapse:collapse}
 .mrow .pr{font-size:clamp(26px,3.4vw,36px);font-weight:700;letter-spacing:-1.4px;line-height:1;white-space:nowrap}
 .menu p{margin:6px 0 0;font-size:15px;max-width:480px}
 .menu .id{font:500 12px 'DM Mono',monospace;letter-spacing:1px;margin-top:8px;display:block}
+.chip input:disabled+span{opacity:.38;cursor:not-allowed}.hint{min-height:1.4em;margin:12px 0 0;font:500 13px 'DM Mono',monospace;letter-spacing:.5px;color:var(--lat)}
 .pick{background:none;border:0;padding:0;margin-top:8px;font:500 12px 'DM Mono',monospace;letter-spacing:1px;color:var(--bos);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .pick:hover{background:var(--bos);color:var(--lat);text-decoration:none}
 .circ{position:absolute;left:-16px;top:-6px;width:calc(100% + 32px);height:calc(100% + 12px);pointer-events:none;overflow:visible}
@@ -813,6 +814,7 @@ footer{background:#050d0a}
             <label class="chip"><input type="checkbox" name="hist" value="1"><span>historias (8)</span></label>
             <label class="chip"><input type="checkbox" name="corp" value="1"><span>video corporativo 16:9</span></label>
           </div>
+          <p class="hint" id="aNote" aria-live="polite"></p>
         </fieldset>
       </div>
       <div class="clap rv" aria-live="polite">
@@ -1012,6 +1014,7 @@ footer{background:#050d0a}
     aereo: {n: 'aéreo', p: 1290, inc: '1 reel y 5 fotografías aéreas con dron.'},
     mensual: {n: 'mensual', p: 2490, inc: '4 reels grabados en hasta 2 jornadas. 1 ronda de cambios por reel.'},
     mensualdron: {n: 'mensual + vuelo de dron', p: 3080, inc: 'Paquete mensual (4 reels) más un vuelo de dron en la misma jornada: $2,490 + $590.'},
+    mensualhist: {n: 'mensual + historias', p: 2700, inc: 'Paquete mensual (4 reels) más 8 historias: $2,490 + $210.'},
     crecimiento: {n: 'crecimiento', p: 3290, inc: '4 reels, 8 historias y tomas aéreas del establecimiento.'},
     corporativo: {n: 'corporativo', p: 3990, pre: true, inc: 'Vuelo de dron, tomas POV inmersivas y 1 video 16:9 con color. Hasta $5,500 según la jornada.'}
   };
@@ -1019,9 +1022,17 @@ footer{background:#050d0a}
   var shown = 790, anim = null, first = true;
   function fmt(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
   function val(n){ var e = $('input[name="' + n + '"]:checked'); return e ? e.value : ''; }
+  function sync(){
+    var reels = val('reels'), corp = $('input[name="corp"]'), dron = $('input[name="dron"]'), hist = $('input[name="hist"]'), note = $('#aNote'), m = '';
+    if (corp.checked) { dron.checked = false; hist.checked = false; m = 'El corporativo ya incluye vuelo de dron y se cotiza según la jornada.'; }
+    else if (reels !== '4') { hist.checked = false; m = 'Las historias se suman al paquete de 4 reels al mes.'; }
+    dron.disabled = corp.checked; hist.disabled = corp.checked || reels !== '4';
+    if (note) note.textContent = m;
+  }
   function calc(){
+    sync();
     var reels = val('reels'), dron = !!$('input[name="dron"]:checked'), hist = !!$('input[name="hist"]:checked'), corp = !!$('input[name="corp"]:checked');
-    var k = corp ? 'corporativo' : hist ? 'crecimiento' : reels === '4' ? (dron ? 'mensualdron' : 'mensual') : (dron ? 'aereo' : 'basico');
+    var k = corp ? 'corporativo' : reels === '4' ? (hist ? (dron ? 'crecimiento' : 'mensualhist') : (dron ? 'mensualdron' : 'mensual')) : (dron ? 'aereo' : 'basico');
     var p = PK[k], neg = NEG[val('neg')] || NEG.otro;
     $('#rNom').textContent = p.n; $('#rInc').textContent = p.inc;
     $('#rPre').hidden = !p.pre;
@@ -1039,7 +1050,7 @@ footer{background:#050d0a}
   calc();
 
   // "armar este" en el menú llena el armador
-  var PRE = {basico: {reels: '1', dron: 0, hist: 0, corp: 0}, aereo: {reels: '1', dron: 1, hist: 0, corp: 0}, mensual: {reels: '4', dron: 0, hist: 0, corp: 0}, crecimiento: {reels: '4', dron: 0, hist: 1, corp: 0}, corporativo: {reels: '1', dron: 0, hist: 0, corp: 1}};
+  var PRE = {basico: {reels: '1', dron: 0, hist: 0, corp: 0}, aereo: {reels: '1', dron: 1, hist: 0, corp: 0}, mensual: {reels: '4', dron: 0, hist: 0, corp: 0}, crecimiento: {reels: '4', dron: 1, hist: 1, corp: 0}, corporativo: {reels: '1', dron: 0, hist: 0, corp: 1}};
   $$('.pick').forEach(function(b){
     b.addEventListener('click', function(){
       var d = PRE[b.getAttribute('data-pk')]; if (!d) return;
