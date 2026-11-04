@@ -1,0 +1,24 @@
+name: Reintentar despliegue de Pages
+
+# Si "pages build and deployment" falla (por ejemplo por tiempo de espera de GitHub),
+# lo vuelve a lanzar solo, hasta 3 intentos en total.
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  reintentar:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 3 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Relanzar el despliegue fallido
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Intento ${{ github.event.workflow_run.run_attempt }} fallido; relanzando"
+          gh run rerun ${{ github.event.workflow_run.id }} --repo ${{ github.repository }} --failed
