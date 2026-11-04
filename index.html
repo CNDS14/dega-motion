@@ -700,6 +700,16 @@ footer{background:#050d0a}
 .who-l li{border:1px solid var(--lat);color:var(--lat);border-radius:999px;padding:7px 16px;font:500 13px 'DM Mono',monospace}
 @media (max-width:820px){.who{grid-template-columns:1fr;gap:18px;margin-bottom:44px}}
 .fr.wide{flex-basis:min(540px,86vw)}.fr.wide .film .mv{height:auto;aspect-ratio:16/9}
+.faq{max-width:none;border-top:0;margin-top:34px}
+.faqx{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.ftabs{display:flex;flex-direction:column;gap:6px;position:sticky;top:110px}
+.ftabs button{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:transparent;border:1px solid var(--lin);color:var(--hue);border-radius:12px;padding:16px 18px;font:600 19px 'Outfit',sans-serif;letter-spacing:-.4px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.ftabs button small{font:500 12px 'DM Mono',monospace;opacity:.7}
+.ftabs button:hover{border-color:var(--lat)}
+.ftabs button[aria-selected="true"]{background:var(--lat);border-color:var(--lat);color:var(--bos)}
+.fpanels details:first-child{border-top:2px solid var(--hue)}
+.fpanels [role=tabpanel]{min-height:100px}
+@media (max-width:820px){.faqx{grid-template-columns:1fr;gap:18px}.ftabs{position:static;flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:none}.ftabs button{flex:0 0 auto;white-space:nowrap;padding:12px 16px;font-size:16px}}
 </style>
 <noscript><style>.links{display:flex;flex-wrap:wrap;gap:6px 22px;font-weight:500}.mbtn{display:none}.rv{opacity:1;transform:none}.hero h1 .w{opacity:1;transform:none;animation:none}.draw path{stroke-dashoffset:0}</style></noscript>
 </head>
@@ -925,19 +935,7 @@ footer{background:#050d0a}
   <div class="wrap sec">
     <div class="sech rv"><div class="nrow"><span class="num" aria-hidden="true">07</span><span class="rule"></span></div><div class="tag">preguntas</div><h2>dudas frecuentes</h2></div>
     <div class="faq rv">
-      <details name="faq"><summary>¿Cuánto cuesta un reel para mi negocio?</summary><p>Un reel de 20 a 30 segundos cuesta $790 MXN en el paquete básico. Los paquetes van de $790 a $5,500 MXN según lo que necesites. Todos los precios incluyen IVA. Puedes armar el tuyo en esta misma página.</p></details>
-      <details name="faq"><summary>¿Qué incluyen las historias?</summary><p>Las 8 historias son piezas verticales (9:16) de hasta 15 segundos para Instagram y Facebook, editadas con el mismo color y música que tus reels. Se arman con el material de la misma jornada de grabación, así que no hay que pagar otra jornada, y se entregan junto con los reels. En el paquete crecimiento van incluidas; sumadas al mensual cuestan $210 MXN.</p></details>
-      <details name="faq"><summary>¿Hacen video con dron?</summary><p>Sí. El paquete aéreo ($1,290 MXN) incluye 1 reel y 5 fotografías aéreas, y el vuelo de dron se puede sumar a otro paquete por $590 MXN. El vuelo depende del clima, sin lluvia ni viento fuerte; si no se puede volar, reagendamos sin costo.</p></details>
-      <details name="faq"><summary>¿Con qué equipo graban?</summary><p>Grabamos con iPhone 15, DJI Osmo Pocket 3, DJI Osmo Mobile SE, micrófono DJI Mic Mini y dron DJI Mini 3 con video en 4K. Para tomas POV usamos lentes Ray-Ban Meta, que van en el paquete corporativo o se cotizan aparte.</p></details>
-      <details name="faq"><summary>¿Cuánto tardan en entregar?</summary><p>La entrega es de 3 a 5 días hábiles después de la grabación.</p></details>
-      <details name="faq"><summary>¿Qué tipo de negocios atienden?</summary><p>Restaurantes, cafés, bares, inmobiliarias, tiendas y servicios, fundaciones y marcas grandes. Si no ves el tuyo, escríbenos y lo platicamos.</p></details>
-      <details name="faq"><summary>¿Dónde trabajan?</summary><p>Estamos en Durango, México, y grabamos en la ciudad de Durango. Si tu negocio está en otro municipio también vamos: se cotiza cubriendo los viáticos de transporte correspondientes.</p></details>
-      <details name="faq"><summary>¿Cuál es el horario de atención?</summary><p>Atendemos de lunes a viernes de 9:00 a 19:00 y los sábados de 9:00 a 17:00. Escríbenos por WhatsApp y te respondemos en ese horario.</p></details>
-      <details name="faq"><summary>¿Cuántos cambios incluye?</summary><p>Una ronda de cambios de edición está incluida. Los cambios adicionales o una re-edición completa cuestan $200 MXN por hora. Volver a grabar genera honorarios aparte.</p></details>
-      <details name="faq"><summary>¿Cómo se paga?</summary><p>50 % de anticipo para apartar la fecha y 50 % contra la entrega del material final. Los precios publicados ya incluyen IVA y emitimos factura (CFDI).</p></details>
-      <details name="faq"><summary>¿Qué archivos recibo?</summary><p>Archivos MP4 (H.264), 1080p a 60 cuadros por segundo, listos para redes. No se entregan proyectos editables.</p></details>
-      <details name="faq"><summary>¿Puedo usar el video en mis redes y mi sitio?</summary><p>Sí, al liquidar el 100 %. DEGA Motion conserva el derecho de usarlo en su portafolio.</p></details>
-      <details name="faq"><summary>¿Y si cancelo?</summary><p>Con 24 horas o más de aviso se reagenda una vez. Con menos de 24 horas, el anticipo no se devuelve.</p></details>
+<div class="faqx"><div class="ftabs" role="tablist" aria-label="Categorías de preguntas"><button type="button" role="tab" id="ft0" aria-controls="fp0" aria-selected="true" tabindex="0"><span>precios y pagos</span><small>4</small></button><button type="button" role="tab" id="ft1" aria-controls="fp1" aria-selected="false" tabindex="-1"><span>qué hacemos</span><small>4</small></button><button type="button" role="tab" id="ft2" aria-controls="fp2" aria-selected="false" tabindex="-1"><span>tiempos y zona</span><small>3</small></button><button type="button" role="tab" id="ft3" aria-controls="fp3" aria-selected="false" tabindex="-1"><span>archivos y derechos</span><small>2</small></button></div><div class="fpanels"><div role="tabpanel" id="fp0" aria-labelledby="ft0"><details name="faq"><summary>¿Cuánto cuesta un reel para mi negocio?</summary><p>Un reel de 20 a 30 segundos cuesta $790 MXN en el paquete básico. Los paquetes van de $790 a $5,500 MXN según lo que necesites. Todos los precios incluyen IVA. Puedes armar el tuyo en esta misma página.</p></details><details name="faq"><summary>¿Qué incluyen las historias?</summary><p>Las 8 historias son piezas verticales (9:16) de hasta 15 segundos para Instagram y Facebook, editadas con el mismo color y música que tus reels. Se arman con el material de la misma jornada de grabación, así que no hay que pagar otra jornada, y se entregan junto con los reels. En el paquete crecimiento van incluidas; sumadas al mensual cuestan $210 MXN.</p></details><details name="faq"><summary>¿Cómo se paga?</summary><p>50 % de anticipo para apartar la fecha y 50 % contra la entrega del material final. Los precios publicados ya incluyen IVA y emitimos factura (CFDI).</p></details><details name="faq"><summary>¿Y si cancelo?</summary><p>Con 24 horas o más de aviso se reagenda una vez. Con menos de 24 horas, el anticipo no se devuelve.</p></details></div><div role="tabpanel" id="fp1" aria-labelledby="ft1" hidden><details name="faq"><summary>¿Hacen video con dron?</summary><p>Sí. El paquete aéreo ($1,290 MXN) incluye 1 reel y 5 fotografías aéreas, y el vuelo de dron se puede sumar a otro paquete por $590 MXN. El vuelo depende del clima, sin lluvia ni viento fuerte; si no se puede volar, reagendamos sin costo.</p></details><details name="faq"><summary>¿Con qué equipo graban?</summary><p>Grabamos con iPhone 15, DJI Osmo Pocket 3, DJI Osmo Mobile SE, micrófono DJI Mic Mini y dron DJI Mini 3 con video en 4K. Para tomas POV usamos lentes Ray-Ban Meta, que van en el paquete corporativo o se cotizan aparte.</p></details><details name="faq"><summary>¿Qué tipo de negocios atienden?</summary><p>Restaurantes, cafés, bares, inmobiliarias, tiendas y servicios, fundaciones y marcas grandes. Si no ves el tuyo, escríbenos y lo platicamos.</p></details><details name="faq"><summary>¿Cuántos cambios incluye?</summary><p>Una ronda de cambios de edición está incluida. Los cambios adicionales o una re-edición completa cuestan $200 MXN por hora. Volver a grabar genera honorarios aparte.</p></details></div><div role="tabpanel" id="fp2" aria-labelledby="ft2" hidden><details name="faq"><summary>¿Cuánto tardan en entregar?</summary><p>La entrega es de 3 a 5 días hábiles después de la grabación.</p></details><details name="faq"><summary>¿Dónde trabajan?</summary><p>Estamos en Durango, México, y grabamos en la ciudad de Durango. Si tu negocio está en otro municipio también vamos: se cotiza cubriendo los viáticos de transporte correspondientes.</p></details><details name="faq"><summary>¿Cuál es el horario de atención?</summary><p>Atendemos de lunes a viernes de 9:00 a 19:00 y los sábados de 9:00 a 17:00. Escríbenos por WhatsApp y te respondemos en ese horario.</p></details></div><div role="tabpanel" id="fp3" aria-labelledby="ft3" hidden><details name="faq"><summary>¿Qué archivos recibo?</summary><p>Archivos MP4 (H.264), 1080p a 60 cuadros por segundo, listos para redes. No se entregan proyectos editables.</p></details><details name="faq"><summary>¿Puedo usar el video en mis redes y mi sitio?</summary><p>Sí, al liquidar el 100 %. DEGA Motion conserva el derecho de usarlo en su portafolio.</p></details></div></div></div>
     </div>
   </div>
 </section>
@@ -1238,6 +1236,25 @@ footer{background:#050d0a}
   }
   $$('.mlist a').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); goTo(a.getAttribute('data-s'), true); }); });
   $$('.rail a').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); goTo(a.getAttribute('data-s'), false); }); });
+})();
+
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ftabs [role=tab]'));
+  if(!tabs.length) return;
+  function show(t,focus){
+    tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on;});
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t,false)});
+    t.addEventListener('keydown',function(e){
+      var n=-1;
+      if(e.key==='ArrowDown'||e.key==='ArrowRight')n=(i+1)%tabs.length;
+      else if(e.key==='ArrowUp'||e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+      else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;
+      if(n>=0){e.preventDefault();show(tabs[n],true)}
+    });
+  });
 })();
 </script>
 
